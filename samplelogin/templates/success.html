@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/login.css">
+    </head>
+<body>
+    <h2>{{if .}}
+        {{.}}
+    {{end}}</h2>
+<form action="/login" method="POST">
+        <input type="submit" value="Login" id="log">
+    </form>
+    
+ </body>
+    </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/login.css">
+    </head>
+<body>
+
+<h2>Forgot Password</h2><br>
+<h3><ul>
+    <li>passwords must contain a uppercase letter, lowercase letter, number, and special character</li>
+    <li>passwords must be greater than 5 characters but less than 15</li>
+</ul></h3><br>
+<div class="login">
+<form action="/passwordauth" method="POST">
+    <label for="username"><b>Name:</b></label><br>
+    <input type="text" id="username" name="username"><br><br>
+    <label for="password"><b>Password:</b></label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <label for="cpassword"><b>confirm password:</b></label><br>
+    <input type="password" id="cpassword" name="cpassword"><br><br>
+    <label for="email"><b>Email:</b></label><br>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="submit" value="Submit" id="log">
+</form> 
+</div>
+
+<br><br>
+<h2>{{if .}}
+    {{.}}
+{{end}}</h2>
+
+</body>
+</html>

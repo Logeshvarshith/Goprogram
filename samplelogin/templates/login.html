@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/login.css">
+    <script src="static/main.js"></script>
+</head>
+<body>
+
+<h2>Login</h2><br>
+<div class="login">
+<form name="logcheck" action="/loginauth" method="POST">
+    <label for="username"><b>Name:</b></label><br>
+    <input type="text" id="username" name="username"><br><br>
+    <label for="password"><b>Password:</b></label><br>
+    <input type="password" id="password" name="password"><br><br>
+    
+    <input type="submit" value="Submit" onclick="ValidateEmail(document.logcheck.username)" id="log">
+   
+</form> <br><br>
+<form action="/password" method="POST">
+    <input type="submit" value="Forgot Password" id="forgot">
+</form> <br><br>
+
+<form action="/register" method="POST">
+    <input type="submit" value="Register" id="register">
+</form>
+</div>
+<script>
+    {
+       function ValidateEmail(event, inputText){
+          event.preventDefault();
+          return false;
+       }
+    }
+    </script>
+
+<br><br>
+<h2>
+    {{if .}}
+    {{.}}
+{{end}}</h2>
+
+</body>
+</html>
