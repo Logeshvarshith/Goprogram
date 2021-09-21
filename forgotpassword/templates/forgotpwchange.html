@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create New Password</h2><br>
+
+<form action="/forgotpwemailver{{.AuthInfo}}" method="POST">
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+    <label for="confirmpassword">Confirm Password:</label><br>
+    <input type="password" id="confirmpassword" name="confirmpassword"><br>
+    <input type="submit" value="Submit">
+</form> 
+<br><br>
+{{if .ErrMessage}}
+    {{.}}
+{{end}}
+
+</body>
+</html>
